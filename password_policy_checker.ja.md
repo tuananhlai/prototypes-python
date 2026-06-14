@@ -1,19 +1,19 @@
-# Mini Project: Password Policy Checker
+# ミニプロジェクト: パスワードポリシーチェッカー
 
-**Topics:** variables · conditionals · loops · strings · sets · functions
+**トピック:** 変数 · 条件分岐 · ループ · 文字列 · 集合 (set) · 関数
 
-## Overview
+## 概要
 
-Build a CLI tool that checks whether a password meets all of the following rules:
+次のすべてのルールをパスワードが満たしているかどうかを確認するCLIツールを作成します。
 
-1. At least 8 characters long
-2. Contains at least one lower-case letter
-3. Contains at least one upper-case letter
-4. Contains at least one numeric digit (0–9)
-5. Contains at least one special character (not a letter or digit)
-6. Is not one of the 10 most common passwords
+1. 8文字以上であること
+2. 小文字を1つ以上含むこと
+3. 大文字を1つ以上含むこと
+4. 数字 (0〜9) を1つ以上含むこと
+5. 特殊文字 (英字でも数字でもない文字) を1つ以上含むこと
+6. よくあるパスワード上位10件のいずれでもないこと
 
-## Sample Output
+## 出力例
 
 ```
 python3 password_policy_checker.py Helloworld1!
@@ -33,24 +33,24 @@ python3 password_policy_checker.py password
 ❌ Is not common
 ```
 
-## Milestones
+## マイルストーン
 
-### 1. Accept a CLI argument
+### 1. コマンドライン引数を受け取る
 
-Read the password as the first command line argument and print it.
+パスワードを最初のコマンドライン引数として読み取り、出力します。
 
-**Sample output**
+**出力例**
 
 ```
 python3 password_policy_checker.py hello
 hello
 ```
 
-### 2. Rule 1 — Length
+### 2. ルール1 — 長さ
 
-Print whether the password is at least 8 characters long.
+パスワードが8文字以上かどうかを出力します。
 
-**Sample output**
+**出力例**
 
 ```
 python3 password_policy_checker.py longpassword
@@ -60,11 +60,11 @@ python3 password_policy_checker.py hi
 ❌ Has 8 or more characters
 ```
 
-### 3. Rule 2 — Lower-case
+### 3. ルール2 — 小文字
 
-Print whether the password contains at least one lower-case letter.
+パスワードが小文字を1つ以上含むかどうかを出力します。
 
-**Sample output**
+**出力例**
 
 ```
 python3 password_policy_checker.py helloworld
@@ -76,11 +76,11 @@ python3 password_policy_checker.py HELLOWORLD
 ❌ Contains lower-case characters
 ```
 
-### 4. Rule 3 — Upper-case
+### 4. ルール3 — 大文字
 
-Print whether the password contains at least one upper-case letter.
+パスワードが大文字を1つ以上含むかどうかを出力します。
 
-**Sample output**
+**出力例**
 
 ```
 python3 password_policy_checker.py Helloworld
@@ -94,11 +94,11 @@ python3 password_policy_checker.py helloworld
 ❌ Contains upper-case characters
 ```
 
-### 5. Rule 4 — Numeric
+### 5. ルール4 — 数字
 
-Print whether the password contains at least one digit.
+パスワードが数字を1つ以上含むかどうかを出力します。
 
-**Sample output**
+**出力例**
 
 ```
 python3 password_policy_checker.py Helloworld1
@@ -114,11 +114,11 @@ python3 password_policy_checker.py Helloworld
 ❌ Contains numeric characters
 ```
 
-### 6. Rule 5 — Special character
+### 6. ルール5 — 特殊文字
 
-Print whether the password contains at least one special character (anything that is not a letter or digit).
+パスワードが特殊文字 (英字でも数字でもない文字) を1つ以上含むかどうかを出力します。
 
-**Sample output**
+**出力例**
 
 ```
 python3 password_policy_checker.py Helloworld1!
@@ -136,11 +136,11 @@ python3 password_policy_checker.py Helloworld1
 ❌ Contains special characters
 ```
 
-### 7. Rule 6 — Common passwords
+### 7. ルール6 — よくあるパスワード
 
-Print whether the password is absent from the list of 10 most common passwords.
+パスワードがよくあるパスワード上位10件に含まれていないかどうかを出力します。
 
-**Sample output**
+**出力例**
 
 ```
 python3 password_policy_checker.py Helloworld1!
@@ -160,7 +160,7 @@ python3 password_policy_checker.py password
 ❌ Is not common
 ```
 
-## Hints
+## ヒント
 
-- You can loop over the characters of a string with `for c in p:`.
-- Python sets are a good fit for checking membership in the common-password blocklist.
+- `for c in p:` を使って文字列の各文字をループ処理できます。
+- よくあるパスワードのブロックリストへの所属判定には、Pythonの集合 (set) が適しています。
